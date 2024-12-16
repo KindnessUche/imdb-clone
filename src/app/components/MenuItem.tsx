@@ -1,6 +1,5 @@
 import React from "react";
-import { IconBase, IconType } from "react-icons";
-import { Icon } from "next/dist/lib/metadata/types/metadata-types";
+import { IconType } from "react-icons";
 import Link from "next/link";
 
 export default function MenuItem({
