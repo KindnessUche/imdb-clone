@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/movie/[id]/page.jsx",
-    "next.config.ts"
+    "next.config.ts",
+    "src/app/components/Pagination.jsx"
   ],
   "exclude": ["node_modules"]
 }
