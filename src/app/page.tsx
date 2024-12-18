@@ -6,7 +6,7 @@ export default async function Home({ searchParams }: any) {
   const genre = search.genre || "fetchTrending";
   return (
     <div>
-      <ClientFetch genre={genre} />
+      <ClientFetch genre={genre} apiKey={API_KEY} />
     </div>
   );
 }

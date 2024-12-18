@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Pagination from "./Pagination";
 import Loader from "./Loader";
 
-export default function ClientFetch({ genre }) {
+export default function ClientFetch({ genre, apiKey }) {
   const [page, setPage] = useState(1);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ export default function ClientFetch({ genre }) {
             genre === "fetchTopRated"
               ? "/movie/top_rated"
               : "/trending/all/week"
-          }?api_key=2a1f785ebb28b3255fd4c10ed17bf7ce&language=en-US&page=${page}`,
+          }?api_key=${apiKey}&language=en-US&page=${page}`,
           {
             next: { revalidate: 10000 },
           }
