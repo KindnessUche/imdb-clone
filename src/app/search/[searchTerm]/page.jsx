@@ -1,5 +1,5 @@
 import Results from "../../components/Results";
-import Pagination from "../../components/Pagination";
+// import Pagination from "../../components/Pagination";
 export default async function Searchpage({ params }) {
   const page = 1;
   const searchTerm = await params.searchTerm;
@@ -15,14 +15,14 @@ export default async function Searchpage({ params }) {
     <div>
       {!results[0] && <h1 className="text-center pt-6">{noResultMessage()}</h1>}
       {results && <Results results={results} />}
-      {results && (
+      {/* {results && (
         <Pagination
           resultPages={resultPages}
           // onPageChange={(page) => {
           //   page = page;
           // }}
         />
-      )}
+      )} */}
     </div>
   );
 }
