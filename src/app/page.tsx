@@ -11,22 +11,22 @@ export default async function Home({
   const search = await searchParams;
   const genre = search.genre || "fetchTrending";
   return (
-    <div>
-      <Suspense
-        fallback={
-          <div className="flex justify-center mt-16">
-            <Image
-              className="h-52"
-              src="spinner.svg"
-              alt="loading"
-              width={200}
-              height={200}
-            />
-          </div>
-        }
-      >
+    <Suspense
+      fallback={
+        <div className="flex justify-center mt-16">
+          <Image
+            className="h-52"
+            src="spinner.svg"
+            alt="loading"
+            width={200}
+            height={200}
+          />
+        </div>
+      }
+    >
+      <div>
         <ClientFetch genre={genre} apiKey={API_KEY} />
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 }

@@ -12,21 +12,21 @@ export default async function MoviePage({ params }) {
   const movie = await res.json();
   console.log(movie);
   return (
-    <div className="w-full">
-      <div className="p-4 md:p-8 flex flex-col md:flex-row content-center max-w-6xl mx-auto md:space-x-6">
-        <Suspense
-          fallback={
-            <div className="flex justify-center mt-16">
-              <Image
-                className="h-52"
-                src="spinner.svg"
-                alt="loading"
-                width={200}
-                height={200}
-              />
-            </div>
-          }
-        >
+    <Suspense
+      fallback={
+        <div className="flex justify-center mt-16">
+          <Image
+            className="h-52"
+            src="spinner.svg"
+            alt="loading"
+            width={200}
+            height={200}
+          />
+        </div>
+      }
+    >
+      <div className="w-full">
+        <div className="p-4 md:p-8 flex flex-col md:flex-row content-center max-w-6xl mx-auto md:space-x-6">
           <Image
             src={`https://image.tmdb.org/t/p/original/${
               movie.backdrop_path || movie.poster_path
@@ -51,8 +51,8 @@ export default async function MoviePage({ params }) {
               {movie.vote_count}
             </p>
           </div>
-        </Suspense>
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }

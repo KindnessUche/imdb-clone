@@ -14,20 +14,20 @@ export default function NavbarItem({
   const searchParams = useSearchParams();
   const genre = searchParams.get("genre");
   return (
-    <div>
-      <Suspense
-        fallback={
-          <div className="flex justify-center mt-16">
-            <Image
-              className="h-52"
-              src="spinner.svg"
-              alt="loading"
-              width={200}
-              height={200}
-            />
-          </div>
-        }
-      >
+    <Suspense
+      fallback={
+        <div className="flex justify-center mt-16">
+          <Image
+            className="h-52"
+            src="spinner.svg"
+            alt="loading"
+            width={200}
+            height={200}
+          />
+        </div>
+      }
+    >
+      <div>
         <Link
           className={`hover:text-amber-600 font-semibold ${
             genre === param
@@ -38,7 +38,7 @@ export default function NavbarItem({
         >
           {title}
         </Link>
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 }
