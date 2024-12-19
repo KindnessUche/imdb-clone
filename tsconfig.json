@@ -30,7 +30,8 @@
     "src/app/movie/[id]/page.jsx",
     "next.config.ts",
     "src/app/components/Pagination.jsx",
-    "src/app/components/Results.jsx"
+    "src/app/components/Results.jsx",
+    "src/app/components/Card.jsx"
   ],
   "exclude": ["node_modules"]
 }
