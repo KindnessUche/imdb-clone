@@ -7,8 +7,8 @@ export default function Loader() {
         className="h-52"
         src="spinner.svg"
         alt="loading"
-        width={52}
-        height={52}
+        width={200}
+        height={200}
       />
     </div>
   );
