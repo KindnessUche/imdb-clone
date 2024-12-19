@@ -6,7 +6,7 @@ export default function error({ error, reset }) {
   }, [error]);
   return (
     <div className="text-center mt-10">
-      <h1>{noResultMessage()}</h1>
+      <h1>Poor Internet connection.</h1>
       <button
         className="hover:text-amber-600"
         onClick={() => {
@@ -18,16 +18,3 @@ export default function error({ error, reset }) {
     </div>
   );
 }
-
-const noResultMessage = function () {
-  let array = [
-    "Check if the wifi is down.",
-    "Poor Internet connection.",
-    "Looks like a network hiccup.",
-    "Oops! The signal is playing hard to get.",
-    "The internet is shy today.",
-  ];
-  let index = Math.floor(Math.random() * array.length);
-  let chosenText = array[index];
-  return chosenText;
-};
