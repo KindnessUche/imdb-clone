@@ -29,7 +29,8 @@
     ".next/types/**/*.ts",
     "src/app/movie/[id]/page.jsx",
     "next.config.ts",
-    "src/app/components/Pagination.jsx"
+    "src/app/components/Pagination.jsx",
+    "src/app/components/Results.jsx"
   ],
   "exclude": ["node_modules"]
 }

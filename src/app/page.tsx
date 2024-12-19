@@ -1,8 +1,12 @@
 import ClientFetch from "./components/ClientFetch";
 const API_KEY = process.env.API_KEY;
 
-export default async function Home({ searchParams }: any) {
-  let search = await searchParams;
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ genre: string }>;
+}) {
+  const search = await searchParams;
   const genre = search.genre || "fetchTrending";
   return (
     <div>
