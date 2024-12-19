@@ -14,7 +14,7 @@ export default function ClientSearch({ searchTerm, apiKey }) {
       setLoading(true);
       try {
         const res = await fetch(
-          `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchTerm}&language=en-US&page=${page}&include_adult=false`
+          `https://api.themoviedb.org/3/search/movie?api_key=2a1f785ebb28b3255fd4c10ed17bf7ce&query=${searchTerm}&language=en-US&page=${page}&include_adult=false`
         );
         const dat = await res.json();
         setData(dat);

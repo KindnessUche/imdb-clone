@@ -18,7 +18,7 @@ export default function ClientFetch({ genre, apiKey }) {
             genre === "fetchTopRated"
               ? "/movie/top_rated"
               : "/trending/all/week"
-          }?api_key=${apiKey}&language=en-US&page=${page}`,
+          }?api_key=2a1f785ebb28b3255fd4c10ed17bf7ce&language=en-US&page=${page}`,
           {
             next: { revalidate: 10000 },
           }
