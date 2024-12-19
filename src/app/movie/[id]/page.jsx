@@ -5,7 +5,8 @@ export default async function MoviePage({ params }) {
   const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}`, {
     method: "GET",
     headers: {
-      Authorization: process.env.API_TOKEN,
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYTFmNzg1ZWJiMjhiMzI1NWZkNGMxMGVkMTdiZjdjZSIsIm5iZiI6MTczNDEyMjE3MS44MzM5OTk5LCJzdWIiOiI2NzVjOWFiYjg1MzRhMWM4ZTIyYjUwM2QiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.kkeLib9gtXhfgLVRk81585puz4PvF5g8-cH-vxCgcuM",
     },
   });
   const movie = await res.json();
