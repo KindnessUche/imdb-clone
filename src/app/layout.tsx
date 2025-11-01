@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IMDB clone",
-  description: "This is a movie database clone",
+  title: "MovieVerse",
+  description: "This is a movie database site",
 };
 
 export default function RootLayout({
